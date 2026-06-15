@@ -3,3 +3,4 @@ Database Administrator dan Monitoring Lab
 
 ## Skills
 - PostgreSQL Administration
+- Replication
