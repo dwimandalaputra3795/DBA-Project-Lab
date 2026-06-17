@@ -58,10 +58,10 @@ psql --version
 
 ## 8. Pengecekan setelah instalasi
 
-# - cek lokasi data directory dari PostgreSQL
-# - Cek lokasi File Konfigurasi
-# - Cek lokasi pg_hba.conf
-# - Cek Port PostgreSQL
+- cek lokasi data directory dari PostgreSQL
+- Cek lokasi File Konfigurasi
+- Cek lokasi pg_hba.conf
+- Cek Port PostgreSQL
 
 
 
