@@ -1,6 +1,6 @@
 # PostgreSQL User, Role, Schema & Privilege Management
 
-Project ini berisi contoh implementasi pengelolaan keamaan PostgreSQL.
+Project ini berisi contoh implementasi pengelolaan keamanan PostgreSQL.
 
 ## Materi
 
