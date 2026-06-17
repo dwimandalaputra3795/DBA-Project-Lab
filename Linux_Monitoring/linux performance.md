@@ -9,7 +9,7 @@
 
 - free -m
 - vmstat
-- sar -f
+- sar -r
 
 ## Disk
 
