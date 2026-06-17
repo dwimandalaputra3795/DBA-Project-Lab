@@ -1,7 +1,7 @@
 # DBA-Project-Lab
 Database Administrator dan Monitoring Lab
 
-## Skills
+## Hard Skills
 - Installation PostgreSQL
 - PostgreSQL Administration
 - Replication
