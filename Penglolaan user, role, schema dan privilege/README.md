@@ -16,9 +16,9 @@ User_management/
 
 Role_management/
 
-Schema_management/
-
 privilege_management/
+
+Schema_management/
 
 dokumentasi/
 
