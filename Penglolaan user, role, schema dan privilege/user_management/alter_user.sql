@@ -1,0 +1,1 @@
+ALTER USER dmp RENAME TO putra;
