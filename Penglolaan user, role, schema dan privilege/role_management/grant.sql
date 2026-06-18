@@ -1,0 +1,1 @@
+GRANT tes TO dmp;
