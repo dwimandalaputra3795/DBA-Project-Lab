@@ -1,4 +1,5 @@
 # Linux Monitoring
+Project Monitoring Linux untuk kebutuhan SysAdmin dan DBA.
 
 ## CPU
 
@@ -19,4 +20,6 @@
 ## Detailed CPU
 
 - sar -A
+
+
 
