@@ -1,1 +1,1 @@
-DROP ROLE putra;
+DROP ROLE dmp;
