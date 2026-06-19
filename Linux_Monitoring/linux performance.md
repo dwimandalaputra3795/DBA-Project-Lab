@@ -21,5 +21,10 @@ Project Monitoring Linux untuk kebutuhan SysAdmin dan DBA.
 
 - sar -A
 
+## Cara Menjalankan nya
+
+```bash
+chmod +x *.sh
+./nama_file.sh
 
 
