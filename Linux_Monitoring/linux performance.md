@@ -23,8 +23,8 @@ Project Monitoring Linux untuk kebutuhan SysAdmin dan DBA.
 
 ## Cara Menjalankan nya
 
+``bash
 ```bash
-chmod +x *.sh
-./nama_file.sh
+top
 
 
