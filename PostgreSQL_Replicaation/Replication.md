@@ -10,42 +10,11 @@ Implement Streaming Replication PostgreSQL 17
              |
       Standby Server
 
-## Primary Server
-
-- membuat user
-- Konfigurasi postgresql.conf
-    ```conf 
-    Listen Addresses = '*'
-    password_encryption = scram-sha-256 
-    wal_level = replica 
-    max_wal_senders = 10 
-    hot_standby = on
-
-- Konfigurasi pg_hba.conf
-    ```conf
-    host | replication | dwi | 192.168.101.7/24 | scram-sha-256 |
-
-- Restart PostgreSQL
-    ```bash
-    systemctl restart postgresql-17
-
-## Standby Server
-
-- Stop PostgreSQL
-    ```bash
-    systemctl stop postgresql-17
-- Menghapus data directory
-- backup data directory dari primary ke standby
-  ```bash
-    pg_basebackup -h 192.168.101.8 -p 5432 -D /var/lib/pgsql/17/data -U dwi -Fp -Xs -P -R
-
-keterangan :
-- Start PostgreSQL
-    ```bash
-    systemctl start postgresql-17
-- Cek status PostgreSQL
-    ```bash
-    systemctl status postgresql-17
+## Features Server
+- Streaming Replication
+- WAL Shipping
+- Replication Monitoring
+- Failover Testing
 
 ## Monitoring Queries
 - pg_stat_replication
