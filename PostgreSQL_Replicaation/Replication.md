@@ -30,3 +30,27 @@ Implement Streaming Replication PostgreSQL 17
     systemctl restart postgresql-17
 
 ## Standby Server
+
+- Stop PostgreSQL
+    ```bash
+    systemctl stop postgresql-17
+
+- Menghapus data directory
+- backup data directory dari primary ke standby
+- Start PostgreSQL
+    ```bash
+    systemctl start postgresql-17
+- Cek status PostgreSQL
+    ```bash
+    systemctl status postgresql-17
+
+## Monitoring Queries
+- pg_stat_replication
+- pg_stat_wal
+
+## Tested On
+- PostgreSQL 17
+- RHEL 9
+
+
+
