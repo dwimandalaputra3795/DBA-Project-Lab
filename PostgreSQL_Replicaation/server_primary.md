@@ -15,7 +15,7 @@
     ```conf
     sudo nano /var/lib/pgsql/17/data/pg_hba.conf
     
-    host | replication | dwi | 192.168.101.7/24 | scram-sha-256 |
+    host | replication | dwi | 192.168.101.9/24 | scram-sha-256 |
 
 - Restart PostgreSQL
     ```bash
