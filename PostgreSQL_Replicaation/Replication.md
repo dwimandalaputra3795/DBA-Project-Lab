@@ -19,6 +19,7 @@ Implement Streaming Replication PostgreSQL 17
 ## Monitoring Queries
 - pg_stat_replication
 - pg_stat_wal
+- pg_is_in_recovery()
 
 ## Tested On
 - PostgreSQL 17
