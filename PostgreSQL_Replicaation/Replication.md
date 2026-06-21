@@ -34,9 +34,12 @@ Implement Streaming Replication PostgreSQL 17
 - Stop PostgreSQL
     ```bash
     systemctl stop postgresql-17
-
 - Menghapus data directory
 - backup data directory dari primary ke standby
+  ```bash
+    pg_basebackup -h 192.168.101.8 -p 5432 -D /var/lib/pgsql/17/data -U dwi -Fp -Xs -P -R
+
+keterangan :
 - Start PostgreSQL
     ```bash
     systemctl start postgresql-17
