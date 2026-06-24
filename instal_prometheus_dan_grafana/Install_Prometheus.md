@@ -10,7 +10,7 @@
     tar -xvf prometheus-*.tar.gz
   - Edit config Prometheus
     ```bash
-    sudo vi /etc/prometheus/prometheus.yml
+    sudo nano /etc/prometheus/prometheus.yml
     
     Isi :
         global:
@@ -23,7 +23,7 @@
     
   - Buat service systemd
       ```bash
-      sudo vi /etc/systemd/system/prometheus.service
+      sudo nano /etc/systemd/system/prometheus.service
     
       Isi:
         [Unit]
