@@ -16,7 +16,7 @@
     tar -xzf prometheus-3.12.0.linux-amd64.tar.gz
     cd prometheus-3.12.0.linux-amd64
 
-  - Install binary
+  - Copy binary
     ```bash
     sudo cp prometheus /usr/local/bin/
     sudo cp promtool /usr/local/bin/
