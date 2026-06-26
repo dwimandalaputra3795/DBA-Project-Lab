@@ -59,7 +59,7 @@
         [Install]
         WantedBy=multi-user.target
 
-  - Start Prometheus
+  - Start dan Cek Status Prometheus
     ```bash
     sudo systemctl daemon-reload
     sudo systemctl enable prometheus
