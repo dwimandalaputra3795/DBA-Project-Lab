@@ -1,41 +1,60 @@
-# install Prometheus
+## install Prometheus v3.12.0
 
   - membuat user prometheus
+  - membuat direktory
+    ```bash
+    sudo mkdir /etc/prometheus
+    sudo mkdir /var/lib/prometheus
+    
   - Download Prometheus
     ```bash
-    wget https://github.com/prometheus/prometheus/releases/download/v2.54.1/prometheus-2.54.1.linux-amd64.tar.gz
+    cd /opt
+    wget https://github.com/prometheus/prometheus/releases/download/v3.12.0/prometheus-3.12.0.linux-amd64.tar.gz
 
   - Extract
     ```bash
-    tar -xvf prometheus-*.tar.gz
-  - Edit config Prometheus
+    tar -xzf prometheus-3.12.0.linux-amd64.tar.gz
+    cd prometheus-3.12.0.linux-amd64
+
+  - Install binary
     ```bash
-    sudo nano /etc/prometheus/prometheus.yml
+    sudo cp prometheus /usr/local/bin/
+    sudo cp promtool /usr/local/bin/
     
-    Isi :
-        global:
-          scrape_interval: 15s
-        
-        scrape_configs:
-          - job_name: "prometheus"
-            static_configs:
-              - targets: ["localhost:9090"]
+    sudo chmod +x /usr/local/bin/prometheus
+    sudo chmod +x /usr/local/bin/promtool
+
+  - Copy file konfigurasi
+    ```bash
+    sudo cp prometheus.yml /etc/prometheus/
+
+  - Ubah kepemilikan folder
+    ```bash
+    sudo chown -R prometheus:prometheus /etc/prometheus
+    sudo chown -R prometheus:prometheus /var/lib/prometheus
     
   - Buat service systemd
       ```bash
       sudo nano /etc/systemd/system/prometheus.service
     
       Isi:
+      
         [Unit]
         Description=Prometheus
-        Wants=network-online.target
-        After=network-online.target
+        After=network.target
         
         [Service]
         User=prometheus
+        Group=prometheus
+        Type=simple
+        
         ExecStart=/usr/local/bin/prometheus \
           --config.file=/etc/prometheus/prometheus.yml \
-          --storage.tsdb.path=/var/lib/prometheus
+          --storage.tsdb.path=/var/lib/prometheus \
+          --web.console.templates=/etc/prometheus/consoles \
+          --web.console.libraries=/etc/prometheus/console_libraries
+        
+        Restart=always
         
         [Install]
         WantedBy=multi-user.target
