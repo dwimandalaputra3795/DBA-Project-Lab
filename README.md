@@ -6,4 +6,4 @@ Database Administrator dan Monitoring Lab
 - PostgreSQL Administration
 - Penglolaan user, role, schema dan privilege
 - Replication
-- Install dan konfigurasi Prometheus dan Grafana
+- Install dan Monitoring Prometheus dan Grafana
