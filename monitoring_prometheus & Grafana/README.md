@@ -23,7 +23,7 @@
 - Dashboard menampilkan grafik dan status server secara real-time.
 
 ### Postgres_Exporter
-- Postgres_exporter mengirim metrik dari PostgreSQL
+- Postgres_exporter mengirim metrik PostgreSQL
 - Prometheus mengambil dan menyimpan metrik tersebut
 - Grafana membaca data dari Prometheus
 - Dashboard menampilkan grafik dan status server secara real-time.
